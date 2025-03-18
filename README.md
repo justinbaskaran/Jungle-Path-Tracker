@@ -99,7 +99,7 @@ def visualize_jungle_path(jungle_path):
 
 visualize_jungle_path(jungle_path)
 ```
-🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 🏆 Compare jungle paths to pro players
     Three Metrics:

@@ -3,7 +3,7 @@ import json
 from datetime import timedelta
 import matplotlib.pyplot as plt
 
-API_KEY = "RGAPI-674f66ff-77b3-403a-bcf3-a44733ddaa4a"
+API_KEY = "NONE"
 
 RIOT_ID = "HardstuckBronzey"
 TAGLINE = "BRNZE"  # Example: "NA1"
