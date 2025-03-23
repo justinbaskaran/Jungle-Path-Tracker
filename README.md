@@ -132,17 +132,43 @@ This project is licensed under the MIT License.
 ## Break the big problem into small problems
 
 
-### 1. For a single champion like warwick, I first need to find a high level player
+### 1. For a single champion , I first need to find a high level player
+#### This can be broken down into smaller parts:
+#### 1a. We need an API that can filter, by champion and by Rank.
+
+##
 ### 2. Then I need to find a game with a similar team comp (allies and enemies), as the game I am currently playing (with similar matchups)
+#### This can be broken down into smaller parts:
+#### 1a. We need an API that can filter, by enemy and ally team comp
+
+
 ### 3. Once I have a single champion, and a game similar to his, we can dissect why the better player did the things he did.
 ### This can be broken up into smaller parts:
 #### a. cooldowns on both enemy and allies
 #### b. lane positioning
 #### c. ally and enemy jungle timers.
+#### d. what times they got ganked.
 
 
+## Results
+### We can measure success based on team gold after the first 15-20 mintues, if I have successfully implemented the strategy of the better player the gold by 15-20 difference should look similar. 
+
+
+##
+## Other considersations
+
+#### 1. Teammates may have different skill levels
+#### 2. Enemies may be smurfs
+#### 3. Allies/eneimes may be burned out, and may make non optimal choices or not be paying as much attention
+
+
+
+##
 ## Execution:
-### 1. 
+### 1. We decided on Warwick.
+#### 1. One of the reasons for this is he has a very high amount of mobility, and because low elo has as lot of small fights, you need someone who can "meet" smaller fights rapidly.
+#### 3. We need an api that we can use. 
+
 
 
 
