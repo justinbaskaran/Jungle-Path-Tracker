@@ -126,3 +126,23 @@ This project is licensed under the MIT License.
 
 🚀 Optimize your jungle routes & climb the ranks!
 
+
+# Process for first goal: compare spots of map pressure over time 
+
+## Break the big problem into small problems
+
+
+### 1. For a single champion like warwick, I first need to find a high level player
+### 2. Then I need to find a game with a similar team comp (allies and enemies), as the game I am currently playing (with similar matchups)
+### 3. Once I have a single champion, and a game similar to his, we can dissect why the better player did the things he did.
+### This can be broken up into smaller parts:
+#### a. cooldowns on both enemy and allies
+#### b. lane positioning
+#### c. ally and enemy jungle timers.
+
+
+## Execution:
+### 1. 
+
+
+

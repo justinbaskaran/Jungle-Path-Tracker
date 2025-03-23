@@ -3,7 +3,7 @@ import json
 from datetime import timedelta
 import matplotlib.pyplot as plt
 
-API_KEY = "NONE"
+API_KEY = "RGAPI-bd8bc994-8c8f-45ce-8f77-e64e6c02e6e7"
 
 RIOT_ID = "HardstuckBronzey"
 TAGLINE = "BRNZE"  # Example: "NA1"
@@ -15,14 +15,11 @@ def get_puuid(riot_id, tagline):
     return data.get("puuid")
 
 
-PUUID = str(get_puuid(RIOT_ID, TAGLINE))
-
 def get_match_history(puuid, count=5):
     url = f"https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/{puuid}/ids?start=0&count={count}&api_key={API_KEY}"
     response = requests.get(url)
     return response.json()  # Returns a list of match IDs
 
-match_ids = get_match_history(PUUID)
 
 
 
@@ -30,10 +27,6 @@ def get_match_timeline(match_id):
     url = f"https://americas.api.riotgames.com/lol/match/v5/matches/{match_id}/timeline?api_key={API_KEY}"
     response = requests.get(url)
     return response.json()  # Returns the match timeline
-
-match_timeline = get_match_timeline('NA1_5242369124')
-match2_timeline = get_match_timeline('NA1_5243023447')
-
 
 def extract_jungle_camps(timeline_data, player_id, time_limit=600000):
     jungle_events = []
@@ -48,11 +41,6 @@ def extract_jungle_camps(timeline_data, player_id, time_limit=600000):
                 })
 
     return jungle_events
-
-player_id = 2  # The player’s in-game participant ID
-jungle_path = extract_jungle_camps(match_timeline, player_id)
-jungle_path_2 = extract_jungle_camps(match2_timeline, player_id)
-
 
 def format_jungle_path(jungle_path):
     formatted = []
@@ -87,5 +75,18 @@ def visualize_jungle_path(jungle_path,jungle_path_2):
     plt.title("Jungle Pathing")
     plt.legend()
     plt.show()
+
+
+PUUID = str(get_puuid(RIOT_ID, TAGLINE))
+match_ids = get_match_history(PUUID)
+
+match_timeline = get_match_timeline('NA1_5242369124')
+match2_timeline = get_match_timeline('NA1_5243023447')
+
+player_id = 2  # The player’s in-game participant ID
+jungle_path = extract_jungle_camps(match_timeline, player_id)
+jungle_path_2 = extract_jungle_camps(match2_timeline, player_id)
+
+
 
 visualize_jungle_path(jungle_path,jungle_path_2)
